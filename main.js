@@ -19,36 +19,35 @@ let x=0;
 
     const img = document.createElement('img');
     const p = document.createElement('p');
+    const boxKely = document.querySelector(".box-kely");
 
 function sayingNo(){
-    
-
     for(let i=0;i<x;i++){
         img.src= image[i];
         p.innerText= msg[i];
-    
-    }
     }
     document.querySelector(".box-kely").appendChild(img);
-    document.querySelector(".box-kely").appendChild(p);
-;
-
-const btns = document.querySelectorAll(".btn");
-
+    document.querySelector(".box-kely").appendChild(p);    
+}
 
 function sayingYes(){
-    if(x==0){ 
-        const boxKely = document.querySelector(".box-kely");
-        boxKely.innerHTML+='<p>Yuppy</p>'+'<img width="500px" src="/images/happy-cat.jpg" alt="">';
+    if(x==0){
+        img.src = "/images/happy-cat.jpg";
+        p.innerText="Owh cute, I love you";
         x=1;
     }
+    document.querySelector(".box-kely").appendChild(img);
+    document.querySelector(".box-kely").appendChild(p);    
 }
+
+const btns = document.querySelectorAll(".btn");
 
 btns.forEach(function(btn){
     btn.addEventListener("click",function(a){
         let types = a.currentTarget.classList;
             if(types.contains("yes")){
                 sayingYes(); 
+
             }else if(types.contains("no")){
                 x++;
                 sayingNo();
