@@ -7,7 +7,7 @@ const msg = [
     "You are breaking my heart"
 ];
 const image = [
-    "/images/93iuffshbit21.jpg",
+    // "/images/93iuffshbit21.jpg",
     "/images/e76d0010df219e6697e91cae634c356c.jpg",
     "/images/e7f.jpg",
     "/images/crying_cat.jpg",
@@ -31,11 +31,9 @@ function sayingNo(){
 }
 
 function sayingYes(){
-    if(x==0){
         img.src = "/images/happy-cat.jpg";
         p.innerText="Owh cute, I love you";
-        x=1;
-    }
+
     document.querySelector(".box-kely").appendChild(img);
     document.querySelector(".box-kely").appendChild(p);    
 }
@@ -47,10 +45,10 @@ btns.forEach(function(btn){
         let types = a.currentTarget.classList;
             if(types.contains("yes")){
                 sayingYes(); 
-
             }else if(types.contains("no")){
-                x++;
                 sayingNo();
+                x++;
+
             }
     })
 })

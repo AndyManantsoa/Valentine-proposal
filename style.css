@@ -4,6 +4,33 @@
     margin: 0;
 }
 
+
+body{
+    background-color: rgb(161, 161, 161);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bodyB, .box-kely{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    margin-top: 40px;
+    width: 100px;
+    height: 40px;
+    background-color: #C2FBD7;
+    border-radius: 50px;
+    border-width: 0;
+    box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+    color: #008000;
+    display: inline-block;
+}
 img{
+    margin: 20px;
     width: 400px;
+    height: 300px;
+    border-radius: 50px;
 }
