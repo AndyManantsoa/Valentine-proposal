@@ -28,6 +28,9 @@ button{
     color: #008000;
     display: inline-block;
 }
+.btn no{
+    background-color: red;
+}
 img{
     margin: 20px;
     width: 400px;

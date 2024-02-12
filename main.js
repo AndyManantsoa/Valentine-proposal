@@ -7,7 +7,7 @@ const msg = [
     "You are breaking my heart"
 ];
 const image = [
-    // "/images/93iuffshbit21.jpg",
+    "/images/93iuffshbit21.jpg" ,
     "/images/e76d0010df219e6697e91cae634c356c.jpg",
     "/images/e7f.jpg",
     "/images/crying_cat.jpg",
@@ -21,10 +21,11 @@ let x=0;
     const p = document.createElement('p');
     const boxKely = document.querySelector(".box-kely");
 
-function sayingNo(){
-    for(let i=0;i<x;i++){
-        img.src= image[i];
-        p.innerText= msg[i];
+function sayingNo() {
+    img.src = image[x];
+    p.innerText = msg[x];
+    if (x >= image.length-1) {
+        x = 0; // Reset x to 0 when it reaches the length of image array
     }
     document.querySelector(".box-kely").appendChild(img);
     document.querySelector(".box-kely").appendChild(p);    
@@ -44,11 +45,10 @@ btns.forEach(function(btn){
     btn.addEventListener("click",function(a){
         let types = a.currentTarget.classList;
             if(types.contains("yes")){
-                sayingYes(); 
+                sayingYes();
             }else if(types.contains("no")){
                 sayingNo();
-                x++;
-
+                x++
             }
     })
 })
