@@ -1,17 +1,17 @@
 const msg = [
-    "please",
+    "think again",
     "is that your last world?",
-    "say yes please",
     "I beg you",
     "you have no heart",
-    "You are breaking my heart"
+    "say yes please",
+    "Please"
 ];
 const image = [
+    "/images/kitten-000017380158_Smaller.jpg",
     "/images/93iuffshbit21.jpg" ,
     "/images/e76d0010df219e6697e91cae634c356c.jpg",
-    "/images/e7f.jpg",
     "/images/crying_cat.jpg",
-    "/images/kitten-000017380158_Smaller.jpg",
+    "/images/e7f.jpg",
     "/images/OIP.1FjCq9vfJ1XI26zJil3VngAAAA.jpeg"
 ];
 
@@ -25,7 +25,7 @@ function sayingNo() {
     img.src = image[x];
     p.innerText = msg[x];
     if (x >= image.length-1) {
-        x = 0; // Reset x to 0 when it reaches the length of image array
+        x = 0;
     }
     document.querySelector(".box-kely").appendChild(img);
     document.querySelector(".box-kely").appendChild(p);    

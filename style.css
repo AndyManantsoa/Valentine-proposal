@@ -1,13 +1,40 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(/valentine_14/Be\ My\ Valentine.otf);
+  }
+
+@font-face{
+    font-family: my2ndfont;
+    src: url(/valentine_14/ValentineSoul.ttf);
+}
+
+@font-face{
+    font-family: my3rdfont;
+    src: url(/valentine_14/Valentine\ Cute.ttf);
+}
+
 *{
     box-sizing: border-box;
     border: 0;
     margin: 0;
 }
 
-
 body{
-    background-color: rgb(161, 161, 161);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 213, 220, 0.967);
+    margin-top: 60px
+}
+
+h1{
+    font-family: my2ndfont;
+    font-size: 70px;
+
+}
+
+img{
+    margin: 20px;
+    width: 400px;
+    height: 300px;
+    border-radius: 50px;
 }
 
 .bodyB, .box-kely{
@@ -17,23 +44,34 @@ body{
     flex-direction: column;
 }
 
-button{
-    margin-top: 40px;
-    width: 100px;
-    height: 40px;
-    background-color: #C2FBD7;
-    border-radius: 50px;
-    border-width: 0;
-    box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
-    color: #008000;
-    display: inline-block;
+p{
+    font-family: my3rdfont;
 }
-.btn no{
+
+/* Button part */
+
+button{
+    margin: 40px 20px 10px 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: myFirstFont;
+    font-size: 30px;
+}
+.btn.no:hover{
+    background-color: whitesmoke;
+}
+
+.btn.yes:hover{
+    background-color: aliceblue;
+}
+
+
+.btn.no{
     background-color: red;
 }
-img{
-    margin: 20px;
-    width: 400px;
-    height: 300px;
-    border-radius: 50px;
+.btn.yes{
+    background-color: yellowgreen;
 }
+
+
