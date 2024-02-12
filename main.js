@@ -1,23 +1,40 @@
-const images = [
-    '<p>please</p>'+'<img width=500px src="/images/93iuffshbit21.jpg" alt="">',
-    '<p>is that your last world?</p>'+'<img width=500px src="/images/crying_cat.jpg" alt="">',
-    '<p>you are breaking my heart </p>'+'<img width=500px src="images/e76d0010df219e6697e91cae634c356c.jpg" alt="">',
-    '<p>say yes please</p>'+'<img width=500px src="images/e7f.jpg" alt="">',
-    '<p>I beg you</p>'+'<img width=500px src="images/kitten-000017380158_Smaller.jpg" alt="">',
-    '<p>you haveeno heart</p>'+'<img width=500px src="images/OIP.1FjCq9vfJ1XI26zJil3VngAAAA.jpeg" alt="">'
-]
+const msg = [
+    "please",
+    "is that your last world?",
+    "say yes please",
+    "I beg you",
+    "you have no heart",
+    "You are breaking my heart"
+];
+const image = [
+    "/images/93iuffshbit21.jpg",
+    "/images/e76d0010df219e6697e91cae634c356c.jpg",
+    "/images/e7f.jpg",
+    "/images/crying_cat.jpg",
+    "/images/kitten-000017380158_Smaller.jpg",
+    "/images/OIP.1FjCq9vfJ1XI26zJil3VngAAAA.jpeg"
+];
+
+let x=0;
+
+    const img = document.createElement('img');
+    const p = document.createElement('p');
 
 function sayingNo(){
-    function getRandomImage(){
-        return Math.floor(Math.random() * images.length);
-    };
-    const boxKely = document.querySelector(".box-kely");
-    console.log(images[getRandomImage()])
-    boxKely.innerHTML+= images[getRandomImage()];
-}
+    
 
-const btns = document.querySelectorAll(".btn")
-let x=0;
+    for(let i=0;i<x;i++){
+        img.src= image[i];
+        p.innerText= msg[i];
+    
+    }
+    }
+    document.querySelector(".box-kely").appendChild(img);
+    document.querySelector(".box-kely").appendChild(p);
+;
+
+const btns = document.querySelectorAll(".btn");
+
 
 function sayingYes(){
     if(x==0){ 
@@ -33,12 +50,8 @@ btns.forEach(function(btn){
             if(types.contains("yes")){
                 sayingYes(); 
             }else if(types.contains("no")){
+                x++;
                 sayingNo();
             }
     })
 })
-
-
-
-
-
