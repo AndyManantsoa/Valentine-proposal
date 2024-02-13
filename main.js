@@ -66,9 +66,9 @@ btns.forEach(function(btn){
             }else if(types.contains("no")){
                 sayingNo();
                 x++;
-                width+=10;
-                height+=10;
-                fontSize+=7;
+                width+=80;
+                height+=80;
+                fontSize+=47;
             }
     })
 })
