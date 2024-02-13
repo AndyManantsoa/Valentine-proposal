@@ -1,10 +1,10 @@
 const msg = [
     "think again",
-    "is that your last world?",
+    "give me a chace",
     "I beg you",
     "you have no heart",
     "say yes please",
-    "Please"
+    "Pleeeeeease"
 ];
 const image = [
     "/images/kitten-000017380158_Smaller.jpg",

@@ -59,13 +59,10 @@ button{
     font-family: myFirstFont;
     font-size: 30px;
 }
-.btn.no:hover{
-    background-color: whitesmoke;
+.btn.no:hover, .btn.yes:hover{
+    background-color:deeppink;
 }
 
-.btn.yes:hover{
-    background-color: aliceblue;
-}
 
 
 .btn.no{
