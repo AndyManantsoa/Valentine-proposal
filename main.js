@@ -16,6 +16,9 @@ const image = [
 ];
 
 let x=0;
+let width=100;
+let height=50;
+let fontSize=40;
 
     const img = document.createElement('img');
     const p = document.createElement('p');
@@ -27,13 +30,26 @@ function sayingNo() {
     if (x >= image.length-1) {
         x = 0;
     }
+    
+    document.querySelector(".btn.yes").style.height= `${height}px`;
+    document.querySelector(".btn.yes").style.width= `${width}px`;
+    document.querySelector(".btn.yes").style.fontSize= `${fontSize}px`;
     document.querySelector(".box-kely").appendChild(img);
-    document.querySelector(".box-kely").appendChild(p);    
+    document.querySelector(".box-kely").appendChild(p);
+     
 }
 
 function sayingYes(){
         img.src = "/images/happy-cat.jpg";
         p.innerText="Owh cute, I love you";
+
+    width=100;
+    height=50;
+    fontSize=40;
+
+    document.querySelector(".btn.yes").style.height= `${height}px`;
+    document.querySelector(".btn.yes").style.width= `${width}px`;
+    document.querySelector(".btn.yes").style.fontSize= `${fontSize}px`;
 
     document.querySelector(".box-kely").appendChild(img);
     document.querySelector(".box-kely").appendChild(p);    
@@ -46,9 +62,13 @@ btns.forEach(function(btn){
         let types = a.currentTarget.classList;
             if(types.contains("yes")){
                 sayingYes();
+
             }else if(types.contains("no")){
                 sayingNo();
-                x++
+                x++;
+                width+=10;
+                height+=10;
+                fontSize+=7;
             }
     })
 })

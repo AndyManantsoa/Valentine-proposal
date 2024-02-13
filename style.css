@@ -1,16 +1,16 @@
 @font-face {
     font-family: myFirstFont;
-    src: url(/valentine_14/Be\ My\ Valentine.otf);
+    src: url(/fonts/Be\ My\ Valentine.otf);
   }
 
 @font-face{
     font-family: my2ndfont;
-    src: url(/valentine_14/ValentineSoul.ttf);
+    src: url(/fonts/ValentineSoul.ttf);
 }
 
 @font-face{
     font-family: my3rdfont;
-    src: url(/valentine_14/Valentine\ Cute.ttf);
+    src: url(/fonts/BelieveIt-DvLE.ttf);
 }
 
 *{
@@ -44,8 +44,9 @@ img{
     flex-direction: column;
 }
 
-p{
+p{  margin-top: 12px;
     font-family: my3rdfont;
+    font-size: 40px;
 }
 
 /* Button part */
