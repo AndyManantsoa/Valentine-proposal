@@ -23,6 +23,7 @@ let fontSize=40;
     const img = document.createElement('img');
     const p = document.createElement('p');
     const boxKely = document.querySelector(".box-kely");
+    const answerBtn = document.querySelector(".answer-btn");
 
 function sayingNo() {
     img.src = image[x];
@@ -52,7 +53,11 @@ function sayingYes(){
     document.querySelector(".btn.yes").style.fontSize= `${fontSize}px`;
 
     document.querySelector(".box-kely").appendChild(img);
-    document.querySelector(".box-kely").appendChild(p);    
+    document.querySelector(".box-kely").appendChild(p);
+
+    answerBtn.innerHTML=" ";
+    
+    
 }
 
 const btns = document.querySelectorAll(".btn");
